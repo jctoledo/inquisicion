@@ -4,7 +4,6 @@ from src.lib.utils import *
 import os
 from flask import Flask
 app = Flask(__name__)
-app.config['banana'] = "3"
 
 
 @app.route("/alarm-status")
@@ -51,5 +50,5 @@ def init_api():
     # TODO check communication systems
 
 if __name__ == '__main__':
-    init_api()
+    alarm = init_api()
     app.run(host='0.0.0.0', port=8090)
